@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Include only preference configuration data, strictly excluding SQLite databases and caches -->
+    <include domain="sharedpref" path="psc_target_preferences.preferences_pb" />
+    <include domain="sharedpref" path="psc_app_preferences.preferences_pb" />
+</full-backup-content>

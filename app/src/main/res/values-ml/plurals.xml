@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plural_questions_due">
+        <item quantity="one">%1$d ചോദ്യം പുനരവലോകനം ചെയ്യാനുണ്ട്</item>
+        <item quantity="other">%1$d ചോദ്യങ്ങൾ പുനരവലോകനം ചെയ്യാനുണ്ട്</item>
+    </plurals>
+    <plurals name="plural_streak_days">
+        <item quantity="one">%1$d ദിവസത്തെ പഠനത്തുടർച്ച</item>
+        <item quantity="other">%1$d ദിവസത്തെ പഠനത്തുടർച്ച</item>
+    </plurals>
+    <plurals name="plural_questions_count">
+        <item quantity="one">%1$d ചോദ്യം</item>
+        <item quantity="other">%1$d ചോദ്യങ്ങൾ</item>
+    </plurals>
+    <plurals name="plural_exams_count">
+        <item quantity="one">%1$d പരീക്ഷ</item>
+        <item quantity="other">%1$d പരീക്ഷകൾ</item>
+    </plurals>
+</resources>

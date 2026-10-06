@@ -1,0 +1,199 @@
+<resources>
+    <!-- App & Navigation -->
+    <string name="app_name">പി.എസ്.സി പരീക്ഷാ സഹായി</string>
+    <string name="nav_home">ഹോം</string>
+    <string name="nav_practice">പരിശീലനം</string>
+    <string name="nav_mock_exam">മോക്ക് പരീക്ഷ</string>
+    <string name="nav_progress">പുരോഗതി</string>
+    <string name="nav_profile">പ്രൊഫൈൽ</string>
+    <string name="cd_nav_home">ഹോം സ്ക്രീനിലേക്ക് പോകുക</string>
+    <string name="cd_nav_practice">പരിശീലന സ്ക്രീനിലേക്ക് പോകുക</string>
+    <string name="cd_nav_mock_exam">മോക്ക് പരീക്ഷകളിലേക്ക് പോകുക</string>
+    <string name="cd_nav_progress">പുരോഗതി സ്ക്രീനിലേക്ക് പോകുക</string>
+    <string name="cd_nav_profile">പ്രൊഫൈൽ സ്ക്രീനിലേക്ക് പോകുക</string>
+    <string name="btn_back">പിന്നോട്ട്</string>
+    <string name="cd_navigate_back">പിന്നോട്ട് പോകുക</string>
+
+    <!-- Home Screen -->
+    <string name="home_greeting_aspirant">പി.എസ്.സി ഉദ്യോഗാർത്ഥി</string>
+    <string name="home_streak_title">പഠന ദിനങ്ങൾ</string>
+    <string name="home_streak_days">%1$d ദിനങ്ങൾ</string>
+    <string name="home_target_goal">ഇന്നത്തെ ലക്ഷ്യം</string>
+    <string name="home_target_progress">%1$d / %2$d ചോദ്യങ്ങൾ</string>
+    <string name="home_daily_quiz_title">ഇന്നത്തെ പരിശീലനം</string>
+    <string name="home_daily_quiz_desc">നിങ്ങളുടെ പരീക്ഷാ ലക്ഷ്യത്തിനനുസരിച്ചുള്ള 10 സിലബസ് ചോദ്യങ്ങൾ.</string>
+    <string name="home_daily_quiz_btn">പരിശീലനം ആരംഭിക്കുക</string>
+    <string name="home_spaced_review_title">പുനരവലോകന പരിശീലനം</string>
+    <string name="home_spaced_review_desc">ഓർമ്മ പുതുക്കുന്നതിനായി ഇന്ന് പരിശീലിക്കേണ്ട ചോദ്യങ്ങൾ ലഭ്യമാണ്.</string>
+    <string name="home_spaced_review_btn">ഇപ്പോൾ പരിശീലിക്കുക</string>
+    <string name="home_spaced_review_all_clear">ഇന്നത്തെ പുനരവലോകനങ്ങൾ പൂർത്തിയായി! അഭിനന്ദനങ്ങൾ.</string>
+    <string name="home_weak_topics_title">കൂടുതൽ ശ്രദ്ധിക്കേണ്ടവ</string>
+    <string name="home_weak_topics_desc">60 ശതമാനത്തിൽ താഴെ കൃത്യതയുള്ള വിഷയങ്ങൾ കൂടുതൽ പരിശീലിക്കുക.</string>
+    <string name="home_weak_topics_empty">പ്രത്യേകം ശ്രദ്ധിക്കേണ്ട വിഷയങ്ങൾ കണ്ടെത്തിയിട്ടില്ല. പരിശീലനം തുടരുക!</string>
+    <string name="home_active_target">തിരഞ്ഞെടുത്ത പരീക്ഷ</string>
+    <string name="home_change_target">മാറ്റുക</string>
+
+    <!-- Practice Screen & Topics -->
+    <string name="practice_title">സിലബസ് വിഷയങ്ങൾ</string>
+    <string name="practice_subtitle">കേരള പി.എസ്.സി സിലബസ് വിഷയങ്ങൾ അടിസ്ഥാനമാക്കിയുള്ള പരിശീലനം.</string>
+    <string name="practice_filter_all">എല്ലാ വിഷയങ്ങളും</string>
+    <string name="practice_start_topic_quiz">വിഷയാധിഷ്ഠിത പരീക്ഷ</string>
+    <string name="practice_question_count">%1$d ചോദ്യങ്ങൾ</string>
+    <string name="practice_accuracy_rate">കൃത്യത: %1$d%%</string>
+    <string name="practice_empty_topics">തിരഞ്ഞെടുത്ത പരീക്ഷയ്ക്ക് അനുയോജ്യമായ വിഷയങ്ങൾ കണ്ടെത്തിയില്ല.</string>
+
+    <!-- Topic Detail Screen -->
+    <string name="topic_detail_title">വിഷയ വിവരങ്ങൾ</string>
+    <string name="topic_detail_mastery">വിഷയ നൈപുണ്യം</string>
+    <string name="topic_detail_practice_cta">ചോദ്യങ്ങൾ പരിശീലിക്കുക</string>
+    <string name="topic_detail_question_breakdown">ചോദ്യങ്ങളുടെ വിവരണം</string>
+
+    <!-- Mock Exam Lobby -->
+    <string name="mock_lobby_title">മാതൃകാ പരീക്ഷകൾ</string>
+    <string name="mock_lobby_subtitle">നെഗറ്റീവ് മാർക്കിംഗോടുകൂടിയ സമയബന്ധിത ഔദ്യോഗിക മാതൃകാ പരീക്ഷകൾ (-0.33 നെഗറ്റീവ് മാർക്ക്).</string>
+    <string name="mock_target_card_title">പരീക്ഷാ ഘടനയും ലക്ഷ്യവും</string>
+    <string name="mock_total_questions_label">ആകെ ചോദ്യങ്ങൾ: %1$d</string>
+    <string name="mock_duration_label">സമയം: %1$d മിനിറ്റ്</string>
+    <string name="mock_available_pool">ലഭ്യമായ ആകെ ചോദ്യങ്ങൾ: %1$d</string>
+    <string name="mock_start_btn">മോക്ക് പരീക്ഷ ആരംഭിക്കുക</string>
+    <string name="mock_resume_btn">തുടരുക</string>
+    <string name="mock_history_title">പൂർത്തിയാക്കിയ പരീക്ഷകൾ</string>
+    <string name="mock_history_empty">പൂർത്തിയാക്കിയ പരീക്ഷകൾ ലഭ്യമല്ല. ആദ്യ പരീക്ഷ മുകളിൽ നിന്ന് ആരംഭിക്കൂ!</string>
+    <string name="mock_review_btn">ഉത്തരങ്ങൾ പരിശോധിക്കുക</string>
+
+    <!-- Mock Exam Runner -->
+    <string name="mock_runner_title">മാതൃകാ പരീക്ഷ</string>
+    <string name="mock_runner_question_counter">ചോദ്യം %1$d / %2$d</string>
+    <string name="mock_runner_mark_review">പിന്നീട് പരിശോധിക്കാൻ അടയാളപ്പെടുത്തുക</string>
+    <string name="mock_runner_clear_selection">തിരഞ്ഞെടുത്തത് ഒഴിവാക്കുക</string>
+    <string name="mock_runner_previous">മുമ്പത്തേത്</string>
+    <string name="mock_runner_next">അടുത്തത്</string>
+    <string name="mock_runner_submit">പൂർത്തിയാക്കുക</string>
+    <string name="mock_dialog_submit_title">പരീക്ഷ സമർപ്പിക്കണമോ?</string>
+    <string name="mock_dialog_submit_message">%2$d ചോദ്യങ്ങളിൽ %1$d എണ്ണത്തിന് ഉത്തരം നൽകിയിട്ടുണ്ട് (%3$d എണ്ണം പുനഃപരിശോധനയ്ക്കായി അടയാളപ്പെടുത്തി). പരീക്ഷ അവസാനിപ്പിക്കാൻ ഉറപ്പാണോ?</string>
+    <string name="mock_dialog_submit_confirm">പൂർത്തിയാക്കി സമർപ്പിക്കുക</string>
+    <string name="mock_dialog_submit_cancel">പരീക്ഷ തുടരുക</string>
+    <string name="mock_dialog_exit_title">പരീക്ഷയിൽ നിന്ന് പുറത്തുകടക്കണമോ?</string>
+    <string name="mock_dialog_exit_message">ഔദ്യോഗിക സമയപരിധി വരെ നിങ്ങളുടെ പരീക്ഷാ സമയം പശ്ചാത്തലത്തിൽ തുടരും. മോക്ക് ലോബിയിൽ നിന്ന് എപ്പോൾ വേണമെങ്കിലും പരീക്ഷ പുനരാരംഭിക്കാം.</string>
+    <string name="mock_dialog_exit_confirm">സൂക്ഷിച്ചു പുറത്തുകടക്കുക</string>
+    <string name="mock_dialog_exit_cancel">പരീക്ഷയിൽ തുടരുക</string>
+
+    <!-- Question Palette -->
+    <string name="palette_title">ചോദ്യപ്പട്ടിക</string>
+    <string name="palette_answered_legend">ഉത്തരം നൽകിയവ</string>
+    <string name="palette_marked_legend">അടയാളപ്പെടുത്തിയവ</string>
+    <string name="palette_unanswered_legend">ഉത്തരം നൽകാത്തവ</string>
+    <string name="palette_close">പട്ടിക അടയ്ക്കുക</string>
+
+    <!-- Mock Exam Result -->
+    <string name="mock_result_title">പരീക്ഷാ ഫലം</string>
+    <string name="mock_result_score_label">ലഭിച്ച മാർക്ക് (മൂന്നിലൊന്ന് മൂല്യം)</string>
+    <string name="mock_result_percentage_label">ശതമാനം: %1$s%%</string>
+    <string name="mock_result_correct">ശരിയുത്തരങ്ങൾ (+1): %1$d</string>
+    <string name="mock_result_wrong">തെറ്റുത്തരങ്ങൾ (-0.33): %1$d</string>
+    <string name="mock_result_cancelled">റദ്ദാക്കിയവ: %1$d</string>
+    <string name="mock_result_unanswered">ഉത്തരം നൽകാത്തവ: %1$d</string>
+    <string name="mock_result_time_taken">എടുത്ത സമയം: %1$s</string>
+    <string name="mock_result_review_cta">ഉത്തരങ്ങളും വിശദീകരണങ്ങളും പരിശോധിക്കുക</string>
+    <string name="mock_result_done_cta">ഹോമിലേക്ക് മടങ്ങുക</string>
+
+    <!-- Mock Exam Review -->
+    <string name="mock_review_title">ഉത്തരങ്ങളുടെ പുനരവലോകനം</string>
+    <string name="mock_review_filter_all">എല്ലാം (%1$d)</string>
+    <string name="mock_review_filter_wrong">തെറ്റിയവ (%1$d)</string>
+    <string name="mock_review_filter_marked">അടയാളപ്പെടുത്തിയവ (%1$d)</string>
+    <string name="mock_review_explanation_header">വിശദീകരണം</string>
+    <string name="mock_review_revision_notice">കമ്മീഷൻ പിന്നീട് ഔദ്യോഗിക ഉത്തരസൂചിക തിരുത്തിയിട്ടുണ്ട്. മുൻ ഉത്തര ചട്ടപ്രകാരം ഫലം നിലനിർത്തിയിരിക്കുന്നു.</string>
+    <string name="mock_review_cancelled_notice">പി.എസ്.സി റദ്ദാക്കിയ ചോദ്യം. ഔദ്യോഗിക ചട്ടപ്രകാരം മാർക്ക് അനുവദിച്ചിട്ടുണ്ട്.</string>
+
+    <!-- Quiz Runner & Summary -->
+    <string name="quiz_runner_submit_answer">ഉത്തരം രേഖപ്പെടുത്തുക</string>
+    <string name="quiz_runner_next_question">അടുത്ത ചോദ്യം</string>
+    <string name="quiz_runner_finish_quiz">പരിശീലനം പൂർത്തിയാക്കുക</string>
+    <string name="quiz_summary_title">പരിശീലന ഫലം</string>
+    <string name="quiz_summary_score">മാർക്ക്: %1$d / %2$d</string>
+    <string name="quiz_summary_xp_earned">+%1$d എക്സ്പീരിയൻസ് നേടി!</string>
+    <string name="quiz_summary_leitner_update">പഠന പുനരവലോകന പട്ടിക പുതുക്കി</string>
+
+    <!-- Profile & Gamification -->
+    <string name="profile_title">പ്രൊഫൈലും വിവരങ്ങളും</string>
+    <string name="profile_subtitle">പഠന ദിനങ്ങളും നേട്ടങ്ങളും വിലയിരുത്തുക, ക്രമീകരണങ്ങൾ മാറ്റുക.</string>
+    <string name="profile_streak_card_title">പഠന സ്ഥിരത</string>
+    <string name="profile_achievements_title">ലഭിച്ച നേട്ടങ്ങൾ</string>
+    <string name="profile_manage_content_packs">ചോദ്യ പാക്കേജുകൾ കൈകാര്യം ചെയ്യുക</string>
+    <string name="profile_app_settings">ആപ്പ് ക്രമീകരണങ്ങൾ</string>
+    <string name="profile_attribution">വിവര സ്രോതസ്സും നിരാകരണവും</string>
+
+    <!-- Progress Screen -->
+    <string name="progress_title">പഠന പുരോഗതി</string>
+    <string name="progress_subtitle">വിവിധ വിഷയങ്ങളിലെ നിങ്ങളുടെ പഠന പുരോഗതിയുടെ സമഗ്ര വിവരണം.</string>
+    <string name="progress_leitner_distribution">മെമ്മറി ബോക്സ് നിലവാരം</string>
+    <string name="progress_box_n">ബോക്സ് %1$d</string>
+    <string name="progress_total_attempted">ആകെ പരിശീലിച്ച ചോദ്യങ്ങൾ: %1$d</string>
+    <string name="progress_overall_accuracy">ആകെ കൃത്യത: %1$d%%</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">ക്രമീകരണങ്ങൾ</string>
+    <string name="settings_section_general">പൊതുവായ ക്രമീകരണങ്ങൾ</string>
+    <string name="settings_language_label">ആപ്പ് ഭാഷ</string>
+    <string name="settings_language_system">സിസ്റ്റം ഡിഫോൾട്ട്</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_ml">മലയാളം</string>
+    <string name="settings_section_study">പഠന ലക്ഷ്യങ്ങൾ</string>
+    <string name="settings_daily_goal_label">പ്രതിദിന ചോദ്യ ലക്ഷ്യം</string>
+    <string name="settings_daily_goal_summary">പ്രതിദിനം %1$d ചോദ്യങ്ങൾ</string>
+    <string name="settings_section_target">തിരഞ്ഞെടുത്ത പരീക്ഷ</string>
+    <string name="settings_btn_change_target">ലക്ഷ്യം മാറ്റുക</string>
+    <string name="settings_section_diagnostics">വിവരങ്ങളും സ്ഥിതിവിവരക്കണക്കുകളും</string>
+    <string name="settings_app_version">ആപ്പ് പതിപ്പ്: %1$s</string>
+    <string name="settings_db_version">ഡാറ്റാബേസ് സ്കീമ: v%1$d</string>
+    <string name="settings_content_packs_label">ഇൻസ്റ്റാൾ ചെയ്ത പാക്കേജുകൾ: %1$d</string>
+    <string name="settings_btn_open_packs">ചോദ്യ പാക്കേജുകൾ</string>
+
+    <!-- Attribution & Sourcing Screen -->
+    <string name="attribution_title">വിവര സ്രോതസ്സും നിരാകരണവും</string>
+    <string name="attribution_identity_statement">ഈ ആപ്ലിക്കേഷൻ തികച്ചും സ്വതന്ത്രമായ ഒരു പരീക്ഷാ പരിശീലന സഹായിയാണ്.</string>
+    <string name="attribution_disclaimer_statement">ഈ ആപ്ലിക്കേഷന് കേരള പബ്ലിക് സർവീസ് കമ്മീഷനുമായോ (KPSC) കേരള സർക്കാരുമായോ യാതൊരുവിധ ഔദ്യോഗിക ബന്ധവുമില്ല.</string>
+    <string name="attribution_section_provenance">ഇൻസ്റ്റാൾ ചെയ്ത ചോദ്യ പാക്കേജുകളുടെ വിവരങ്ങൾ</string>
+    <string name="attribution_provenance_pack_id">പാക്കേജ് ഐഡി: %1$s (v%2$d)</string>
+    <string name="attribution_provenance_publisher">പ്രസാധകർ: %1$s</string>
+    <string name="attribution_provenance_questions">ചോദ്യങ്ങൾ: %1$d • പരീക്ഷകൾ: %2$d</string>
+    <string name="attribution_provenance_unavailable">ഈ പാക്കേജിന്റെ വിശദമായ വിവരങ്ങൾ ലഭ്യമല്ല.</string>
+    <string name="attribution_section_integrity">പരീക്ഷാ വിലയിരുത്തൽ ചട്ടങ്ങൾ</string>
+    <string name="attribution_integrity_desc">ചോദ്യങ്ങളും ഉത്തരങ്ങളും സ്കോറിംഗ് രീതികളും (0.33 നെഗറ്റീവ് മാർക്ക് ഉൾപ്പെടെ) പരീക്ഷാ പരിശീലനത്തിനായി കമ്മീഷൻ മാതൃകകൾ അടിസ്ഥാനമാക്കി തയ്യാറാക്കിയതാണ്.</string>
+
+    <!-- Content Packs Screen -->
+    <string name="content_packs_screen_title">ചോദ്യ പാക്കേജുകൾ</string>
+    <string name="content_packs_header_title">ചോദ്യ പാക്കേജുകൾ കൈകാര്യം ചെയ്യുക</string>
+    <string name="content_packs_header_desc">ഫോണിൽ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുള്ള ഓഫ്‌ലൈൻ ചോദ്യ പാക്കേജുകൾ (.kpsc) ഇവിടെ കാണാം.</string>
+    <string name="content_packs_active_section">നിലവിലുള്ള പാക്കേജുകൾ</string>
+    <string name="content_packs_import_card_title">പുതിയ പാക്കേജ് ഇൻസ്റ്റാൾ ചെയ്യുക</string>
+    <string name="content_packs_import_card_desc">ഫോൺ മെമ്മറിയിൽ നിന്നോ ഫയൽ മാനേജരിൽ നിന്നോ .kpsc പാക്കേജ് ഫയൽ തിരഞ്ഞെടുക്കുക.</string>
+    <string name="content_packs_btn_import">പാക്കേജ് ഫയൽ ചേർക്കുക</string>
+    <string name="content_packs_history_section">മുൻ പതിപ്പുകൾ</string>
+    <string name="content_packs_installing_msg">പാക്കേജ് പരിശോധിച്ച് ഇൻസ്റ്റാൾ ചെയ്യുന്നു...</string>
+    <string name="content_packs_success_msg">%1$s (v%2$d) വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു</string>
+    <string name="content_packs_error_title">പാക്കേജ് ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു</string>
+
+    <!-- Empty States & Errors -->
+    <string name="empty_questions_title">ചോദ്യങ്ങൾ ലഭ്യമല്ല</string>
+    <string name="empty_questions_desc">തിരഞ്ഞെടുത്ത പരീക്ഷയ്ക്ക് അനുയോജ്യമായ ചോദ്യങ്ങൾ ലഭ്യമല്ല. പരീക്ഷാ ലക്ഷ്യം മാറ്റുകയോ പുതിയ ചോദ്യ പാക്കേജ് ചേർക്കുകയോ ചെയ്യുക.</string>
+    <string name="db_error_title">ഡാറ്റാബേസ് തകരാർ</string>
+    <string name="db_error_desc">പ്രാദേശിക ഡാറ്റാബേസ് തുറക്കുന്നതിൽ തടസ്സം നേരിട്ടു. നിങ്ങളുടെ പഠന വിവരങ്ങൾ സുരക്ഷിതമാണ്. ദയവായി ആപ്പ് പുനരാരംഭിക്കുക.</string>
+    <string name="db_error_guidance">പഠന വിവരങ്ങൾ നഷ്ടപ്പെടാതിരിക്കാൻ സ്വയം ഡാറ്റ മായ്ക്കുന്ന രീതി ഒഴിവാക്കിയിട്ടുണ്ട്. ദയവായി ആപ്പ് പുനരാരംഭിക്കുക.</string>
+    <string name="db_error_retry">വീണ്ടും ശ്രമിക്കുക</string>
+
+    <!-- Accessibility / TalkBack Semantics -->
+    <string name="cd_timer_milestone">പരീക്ഷയ്ക്ക് അവശേഷിക്കുന്ന സമയം: %1$s</string>
+    <string name="cd_option_unselected">ഓപ്ഷൻ %1$s: %2$s. തിരഞ്ഞെടുക്കാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="cd_option_selected">ഓപ്ഷൻ %1$s, തിരഞ്ഞെടുത്തത്: %2$s.</string>
+    <string name="cd_option_correct">ഓപ്ഷൻ %1$s, ശരിയുത്തരം: %2$s.</string>
+    <string name="cd_option_incorrect">ഓപ്ഷൻ %1$s, തെറ്റായ ഉത്തരം: %2$s.</string>
+    <string name="cd_option_cancelled">ഓപ്ഷൻ %1$s, കമ്മീഷൻ റദ്ദാക്കിയ ചോദ്യം: %2$s.</string>
+    <string name="cd_marked_for_review">പുനഃപരിശോധനയ്ക്കായി അടയാളപ്പെടുത്തി</string>
+    <string name="cd_not_marked_for_review">അടയാളപ്പെടുത്തിയിട്ടില്ല</string>
+    <string name="cd_palette_item">ചോദ്യം %1$d, %2$s. പോകാൻ രണ്ടുതവണ ടാപ്പ് ചെയ്യുക.</string>
+    <string name="cd_palette_state_answered">ഉത്തരം നൽകി</string>
+    <string name="cd_palette_state_marked">അടയാളപ്പെടുത്തി</string>
+    <string name="cd_palette_state_unanswered">ഉത്തരം നൽകിയില്ല</string>
+</resources>

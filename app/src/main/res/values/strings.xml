@@ -1,0 +1,199 @@
+<resources>
+    <!-- App & Navigation -->
+    <string name="app_name">Kerala PSC Prep</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_practice">Practice</string>
+    <string name="nav_mock_exam">Mock Exam</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_profile">Profile</string>
+    <string name="cd_nav_home">Navigate to Home</string>
+    <string name="cd_nav_practice">Navigate to Practice</string>
+    <string name="cd_nav_mock_exam">Navigate to Mock Exams</string>
+    <string name="cd_nav_progress">Navigate to Progress</string>
+    <string name="cd_nav_profile">Navigate to Profile</string>
+    <string name="btn_back">Back</string>
+    <string name="cd_navigate_back">Navigate back</string>
+
+    <!-- Home Screen -->
+    <string name="home_greeting_aspirant">Kerala PSC Aspirant</string>
+    <string name="home_streak_title">Daily Streak</string>
+    <string name="home_streak_days">%1$d Days</string>
+    <string name="home_target_goal">Daily Goal</string>
+    <string name="home_target_progress">%1$d / %2$d Questions</string>
+    <string name="home_daily_quiz_title">Daily Challenge</string>
+    <string name="home_daily_quiz_desc">10 hand-picked syllabus questions tailored to your target exam.</string>
+    <string name="home_daily_quiz_btn">Start Daily Challenge</string>
+    <string name="home_spaced_review_title">Spaced Repetition Review</string>
+    <string name="home_spaced_review_desc">You have questions due for memory retention review today.</string>
+    <string name="home_spaced_review_btn">Review Now</string>
+    <string name="home_spaced_review_all_clear">All spaced repetition reviews are up to date! Great job.</string>
+    <string name="home_weak_topics_title">Priority Revision</string>
+    <string name="home_weak_topics_desc">Strengthen topics where your accuracy is below 60%.</string>
+    <string name="home_weak_topics_empty">No weak topics identified yet. Keep practicing!</string>
+    <string name="home_active_target">Active Exam Target</string>
+    <string name="home_change_target">Change</string>
+
+    <!-- Practice Screen & Topics -->
+    <string name="practice_title">Topic Explorer</string>
+    <string name="practice_subtitle">Master questions organized by Kerala PSC syllabus topics.</string>
+    <string name="practice_filter_all">All Subjects</string>
+    <string name="practice_start_topic_quiz">Start Topic Quiz</string>
+    <string name="practice_question_count">%1$d Questions</string>
+    <string name="practice_accuracy_rate">Accuracy: %1$d%%</string>
+    <string name="practice_empty_topics">No topics found matching the current target filter.</string>
+
+    <!-- Topic Detail Screen -->
+    <string name="topic_detail_title">Topic Details</string>
+    <string name="topic_detail_mastery">Mastery Level</string>
+    <string name="topic_detail_practice_cta">Practice Topic Questions</string>
+    <string name="topic_detail_question_breakdown">Question Breakdown</string>
+
+    <!-- Mock Exam Lobby -->
+    <string name="mock_lobby_title">Mock Examinations</string>
+    <string name="mock_lobby_subtitle">Official Kerala PSC pattern timed tests with negative marking (-0.33 per wrong answer) and authoritative question cancellation.</string>
+    <string name="mock_target_card_title">Exam Pattern &amp; Target</string>
+    <string name="mock_total_questions_label">Total Questions: %1$d</string>
+    <string name="mock_duration_label">Duration: %1$d minutes</string>
+    <string name="mock_available_pool">Available published pool: %1$d questions</string>
+    <string name="mock_start_btn">Start Mock Exam</string>
+    <string name="mock_resume_btn">Resume In-Progress Exam</string>
+    <string name="mock_history_title">Completed Mock Attempts</string>
+    <string name="mock_history_empty">No completed mock examinations yet. Take your first exam above!</string>
+    <string name="mock_review_btn">Review Answers</string>
+
+    <!-- Mock Exam Runner -->
+    <string name="mock_runner_title">Kerala PSC Mock Exam</string>
+    <string name="mock_runner_question_counter">Question %1$d of %2$d</string>
+    <string name="mock_runner_mark_review">Mark for Review</string>
+    <string name="mock_runner_clear_selection">Clear Selection</string>
+    <string name="mock_runner_previous">Previous</string>
+    <string name="mock_runner_next">Next</string>
+    <string name="mock_runner_submit">Submit</string>
+    <string name="mock_dialog_submit_title">Submit Examination?</string>
+    <string name="mock_dialog_submit_message">You have answered %1$d of %2$d questions (%3$d marked for review). Are you sure you want to finish and submit?</string>
+    <string name="mock_dialog_submit_confirm">Finish &amp; Submit</string>
+    <string name="mock_dialog_submit_cancel">Continue Exam</string>
+    <string name="mock_dialog_exit_title">Exit Examination?</string>
+    <string name="mock_dialog_exit_message">Your progress and timer will continue in the background until the official deadline. You can resume anytime from the Mock lobby.</string>
+    <string name="mock_dialog_exit_confirm">Save &amp; Exit</string>
+    <string name="mock_dialog_exit_cancel">Resume</string>
+
+    <!-- Question Palette -->
+    <string name="palette_title">Question Palette</string>
+    <string name="palette_answered_legend">Answered</string>
+    <string name="palette_marked_legend">Marked</string>
+    <string name="palette_unanswered_legend">Unanswered</string>
+    <string name="palette_close">Close Palette</string>
+
+    <!-- Mock Exam Result -->
+    <string name="mock_result_title">Examination Results</string>
+    <string name="mock_result_score_label">Official Score (Integer-Thirds)</string>
+    <string name="mock_result_percentage_label">Percentage: %1$s%%</string>
+    <string name="mock_result_correct">Correct (+1): %1$d</string>
+    <string name="mock_result_wrong">Incorrect (-0.33): %1$d</string>
+    <string name="mock_result_cancelled">Cancelled: %1$d</string>
+    <string name="mock_result_unanswered">Unanswered: %1$d</string>
+    <string name="mock_result_time_taken">Time Taken: %1$s</string>
+    <string name="mock_result_review_cta">Review Answers &amp; Explanations</string>
+    <string name="mock_result_done_cta">Return to Home</string>
+
+    <!-- Mock Exam Review -->
+    <string name="mock_review_title">Detailed Answer Review</string>
+    <string name="mock_review_filter_all">All (%1$d)</string>
+    <string name="mock_review_filter_wrong">Incorrect (%1$d)</string>
+    <string name="mock_review_filter_marked">Marked (%1$d)</string>
+    <string name="mock_review_explanation_header">Official Explanation</string>
+    <string name="mock_review_revision_notice">Official answer key subsequently revised by Commission. Evaluation preserved under historical audit rules.</string>
+    <string name="mock_review_cancelled_notice">Question officially cancelled by PSC. Marks awarded under official rules.</string>
+
+    <!-- Quiz Runner & Summary -->
+    <string name="quiz_runner_submit_answer">Submit Answer</string>
+    <string name="quiz_runner_next_question">Next Question</string>
+    <string name="quiz_runner_finish_quiz">Finish Practice</string>
+    <string name="quiz_summary_title">Practice Summary</string>
+    <string name="quiz_summary_score">Score: %1$d / %2$d</string>
+    <string name="quiz_summary_xp_earned">+%1$d XP Earned!</string>
+    <string name="quiz_summary_leitner_update">Spaced Repetition Schedule Updated</string>
+
+    <!-- Profile & Gamification -->
+    <string name="profile_title">Profile &amp; Settings</string>
+    <string name="profile_subtitle">Track your study streaks, achievements, and configure preferences.</string>
+    <string name="profile_streak_card_title">Study Consistency</string>
+    <string name="profile_achievements_title">Achievements Unlocked</string>
+    <string name="profile_manage_content_packs">Manage Content Packs</string>
+    <string name="profile_app_settings">App Settings</string>
+    <string name="profile_attribution">Legal Disclaimer &amp; Sourcing</string>
+
+    <!-- Progress Screen -->
+    <string name="progress_title">Preparation Progress</string>
+    <string name="progress_subtitle">Comprehensive breakdown of your learning curve across all subjects.</string>
+    <string name="progress_leitner_distribution">Leitner Box Distribution</string>
+    <string name="progress_box_n">Box %1$d</string>
+    <string name="progress_total_attempted">Total Questions Attempted: %1$d</string>
+    <string name="progress_overall_accuracy">Overall Accuracy: %1$d%%</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_general">General Preferences</string>
+    <string name="settings_language_label">App Language</string>
+    <string name="settings_language_system">System Default</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_language_ml">മലയാളം (Malayalam)</string>
+    <string name="settings_section_study">Study Goals</string>
+    <string name="settings_daily_goal_label">Daily Question Target</string>
+    <string name="settings_daily_goal_summary">%1$d questions per day</string>
+    <string name="settings_section_target">Active Exam Target</string>
+    <string name="settings_btn_change_target">Change Target</string>
+    <string name="settings_section_diagnostics">About &amp; Diagnostics</string>
+    <string name="settings_app_version">App Version: %1$s</string>
+    <string name="settings_db_version">Database Schema: v%1$d</string>
+    <string name="settings_content_packs_label">Content Packs Installed: %1$d</string>
+    <string name="settings_btn_open_packs">Manage Content Packs</string>
+
+    <!-- Attribution & Sourcing Screen -->
+    <string name="attribution_title">Sourcing &amp; Disclaimer</string>
+    <string name="attribution_identity_statement">This is an independent educational preparation application.</string>
+    <string name="attribution_disclaimer_statement">This application is not affiliated with, authorized by, sponsored by, or endorsed by the Kerala Public Service Commission (KPSC) or the Government of Kerala.</string>
+    <string name="attribution_section_provenance">Installed Content Provenance</string>
+    <string name="attribution_provenance_pack_id">Pack ID: %1$s (v%2$d)</string>
+    <string name="attribution_provenance_publisher">Publisher: %1$s</string>
+    <string name="attribution_provenance_questions">Questions: %1$d • Exams: %2$d</string>
+    <string name="attribution_provenance_unavailable">Detailed publisher provenance information is unavailable for this content pack.</string>
+    <string name="attribution_section_integrity">Commission Audit Standards</string>
+    <string name="attribution_integrity_desc">Examination questions and scoring rules (including 0.33 negative marking and official cancellation marks) follow established commission patterns for exam preparation.</string>
+
+    <!-- Content Packs Screen -->
+    <string name="content_packs_screen_title">Content Packs &amp; Sync</string>
+    <string name="content_packs_header_title">Question Syllabus Management</string>
+    <string name="content_packs_header_desc">Manage offline syllabus packages (.kpsc) installed on this device.</string>
+    <string name="content_packs_active_section">Active Content Packs</string>
+    <string name="content_packs_import_card_title">Install Content Package</string>
+    <string name="content_packs_import_card_desc">Select a verified Kerala PSC content package archive (.kpsc) from device storage.</string>
+    <string name="content_packs_btn_import">Import Package File</string>
+    <string name="content_packs_history_section">Version History (Archived)</string>
+    <string name="content_packs_installing_msg">Validating and installing content pack...</string>
+    <string name="content_packs_success_msg">Successfully installed %1$s (v%2$d)</string>
+    <string name="content_packs_error_title">Content Pack Installation Failed</string>
+
+    <!-- Empty States & Errors -->
+    <string name="empty_questions_title">No Questions Available</string>
+    <string name="empty_questions_desc">There are no published questions matching your current target filter. Try changing your exam target or importing a content pack.</string>
+    <string name="db_error_title">Database Initialization Error</string>
+    <string name="db_error_desc">The application encountered an issue accessing the local database. Your data has been preserved. Please restart the app or contact support.</string>
+    <string name="db_error_guidance">Destructive recovery has been disabled to protect your study records. Please restart the app or check device storage.</string>
+    <string name="db_error_retry">Retry Opening Database</string>
+
+    <!-- Accessibility / TalkBack Semantics -->
+    <string name="cd_timer_milestone">Remaining examination time: %1$s</string>
+    <string name="cd_option_unselected">Option %1$s: %2$s. Double tap to select.</string>
+    <string name="cd_option_selected">Option %1$s, Selected: %2$s.</string>
+    <string name="cd_option_correct">Option %1$s, Correct answer: %2$s.</string>
+    <string name="cd_option_incorrect">Option %1$s, Selected incorrect answer: %2$s.</string>
+    <string name="cd_option_cancelled">Option %1$s, Question cancelled by Commission: %2$s.</string>
+    <string name="cd_marked_for_review">Marked for review</string>
+    <string name="cd_not_marked_for_review">Not marked for review</string>
+    <string name="cd_palette_item">Question %1$d, %2$s. Double tap to navigate.</string>
+    <string name="cd_palette_state_answered">Answered</string>
+    <string name="cd_palette_state_marked">Marked for review</string>
+    <string name="cd_palette_state_unanswered">Unanswered</string>
+</resources>

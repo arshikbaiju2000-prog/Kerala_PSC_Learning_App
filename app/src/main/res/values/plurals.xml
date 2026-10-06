@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plural_questions_due">
+        <item quantity="one">%1$d question due for review</item>
+        <item quantity="other">%1$d questions due for review</item>
+    </plurals>
+    <plurals name="plural_streak_days">
+        <item quantity="one">%1$d Day Streak</item>
+        <item quantity="other">%1$d Days Streak</item>
+    </plurals>
+    <plurals name="plural_questions_count">
+        <item quantity="one">%1$d Question</item>
+        <item quantity="other">%1$d Questions</item>
+    </plurals>
+    <plurals name="plural_exams_count">
+        <item quantity="one">%1$d Exam</item>
+        <item quantity="other">%1$d Exams</item>
+    </plurals>
+</resources>
