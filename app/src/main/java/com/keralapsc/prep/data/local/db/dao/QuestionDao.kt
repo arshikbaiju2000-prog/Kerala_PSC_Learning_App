@@ -178,4 +178,7 @@ interface QuestionDao {
 
     @Query("DELETE FROM questions WHERE id = :id")
     suspend fun deleteQuestionById(id: String)
+
+    @Query("SELECT id FROM question_sources")
+    suspend fun getAllSourceIds(): List<String>
 }

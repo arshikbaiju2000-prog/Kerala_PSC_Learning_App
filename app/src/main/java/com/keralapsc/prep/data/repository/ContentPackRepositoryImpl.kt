@@ -26,6 +26,8 @@ import com.keralapsc.prep.domain.repository.ContentPackRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import java.io.InputStream
 
 class ContentPackRepositoryImpl(
@@ -34,9 +36,11 @@ class ContentPackRepositoryImpl(
     private val validator: ContentPackValidator = ContentPackValidator()
 ) : ContentPackRepository {
 
+    private val installationMutex = Mutex()
     private val contentPackDao = database.contentPackDao()
     private val syncDao = database.syncDao()
     private val examDao = database.examDao()
+    private val questionDao = database.questionDao()
 
     override fun getAllInstalledPacks(): Flow<List<InstalledContentPack>> {
         return contentPackDao.getAllInstalledPacks().map { list ->
@@ -69,13 +73,19 @@ class ContentPackRepositoryImpl(
         val existingLevels = examDao.getExamLevels().first().map { it.id }.toSet()
         val existingSubjects = examDao.getSubjects().first().map { it.id }.toSet()
         val existingPosts = examDao.getPosts().first().map { it.id }.toSet()
+        val existingExams = examDao.getAllExamIds().toSet()
+        val existingTopics = examDao.getAllTopicIds().toSet()
+        val existingSources = questionDao.getAllSourceIds().toSet()
 
         return validator.validate(
             manifest = manifest,
             payload = payload,
-            existingLevelIds = existingLevels,
+            existingExamIds = existingExams,
+            existingTopicIds = existingTopics,
+            existingPostIds = existingPosts,
             existingSubjectIds = existingSubjects,
-            existingPostIds = existingPosts
+            existingLevelIds = existingLevels,
+            existingSourceIds = existingSources
         )
     }
 
@@ -83,10 +93,11 @@ class ContentPackRepositoryImpl(
         manifest: ContentPackManifest,
         payload: ContentPackPayload,
         checksum: String
-    ): Result<Unit> = runCatching {
-        // Enforce forward-only version check
+    ): Result<Unit> = installationMutex.withLock {
+        runCatching {
+        // Enforce forward-only version check for replacement packs
         val currentVersion = contentPackDao.getLatestInstalledVersion(manifest.packId)
-        if (currentVersion != null && manifest.packVersion < currentVersion) {
+        if (manifest.replacesPreviousVersion && currentVersion != null && manifest.packVersion < currentVersion) {
             throw IllegalArgumentException(
                 "Downgrade prohibited: Attempted to install version ${manifest.packVersion} but version $currentVersion is already installed."
             )
@@ -96,7 +107,7 @@ class ContentPackRepositoryImpl(
             if (existing != null && existing.checksum.equals(checksum.trim(), ignoreCase = true)) {
                 // Idempotent no-op
                 return@runCatching
-            } else {
+            } else if (existing != null) {
                 throw IllegalArgumentException(
                     "Pack ${manifest.packId} v${manifest.packVersion} is already installed with a different checksum."
                 )
@@ -109,7 +120,11 @@ class ContentPackRepositoryImpl(
             val incomingQuestionIds = payload.questions.map { it.id }.toSet()
 
             val addedIds = incomingQuestionIds - existingQuestionIds
-            val membershipRemovedIds = existingQuestionIds - incomingQuestionIds
+            val membershipRemovedIds = if (manifest.replacesPreviousVersion) {
+                existingQuestionIds - incomingQuestionIds
+            } else {
+                emptySet()
+            }
 
             // Explicit manifest withdrawal unioned with membership removal
             val explicitWithdrawnForThisPack = manifest.withdrawnQuestionIds.filter { it in existingQuestionIds }
@@ -162,8 +177,10 @@ class ContentPackRepositoryImpl(
                 contentPackDao.removePackQuestionCrossRefs(manifest.packId, effectiveWithdrawnIds)
             }
 
-            // 3. Deactivate previous pack version
-            contentPackDao.deactivatePreviousPackVersions(manifest.packId)
+            // 3. Deactivate previous pack version only if replacement semantics specified
+            if (manifest.replacesPreviousVersion) {
+                contentPackDao.deactivatePreviousPackVersions(manifest.packId)
+            }
 
             // 4. Activate incoming pack version
             val installationId = "${manifest.packId}_v${manifest.packVersion}"
@@ -190,6 +207,7 @@ class ContentPackRepositoryImpl(
                 )
             }
         }
+    }
     }
 
     override suspend fun countActiveQuestionsWithoutActivePackOwnership(): Int {

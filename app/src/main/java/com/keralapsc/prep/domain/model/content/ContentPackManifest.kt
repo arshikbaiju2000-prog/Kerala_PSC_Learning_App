@@ -19,5 +19,6 @@ data class ContentPackManifest(
     val questionCount: Int,
     val examCount: Int = 0,
     val contentSha256: String,
-    val withdrawnQuestionIds: List<String> = emptyList()
+    val withdrawnQuestionIds: List<String> = emptyList(),
+    val replacesPreviousVersion: Boolean = true
 )

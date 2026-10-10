@@ -151,4 +151,10 @@ interface ExamDao {
 
     @Upsert
     suspend fun insertTopics(topics: List<TopicEntity>)
+
+    @Query("SELECT id FROM exams")
+    suspend fun getAllExamIds(): List<String>
+
+    @Query("SELECT id FROM topics")
+    suspend fun getAllTopicIds(): List<String>
 }

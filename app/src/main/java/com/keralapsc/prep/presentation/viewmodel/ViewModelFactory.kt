@@ -137,7 +137,13 @@ class ViewModelFactory(
             modelClass.isAssignableFrom(ContentPacksViewModel::class.java) -> {
                 ContentPacksViewModel(
                     getInstalledContentPacksUseCase = appContainer.getInstalledContentPacksUseCase,
-                    installContentPackUseCase = appContainer.installContentPackUseCase
+                    installContentPackUseCase = appContainer.installContentPackUseCase,
+                    questionRepository = appContainer.questionRepository,
+                    checkRemoteContentUpdatesUseCase = appContainer.checkRemoteContentUpdatesUseCase,
+                    downloadAndInstallContentPackUseCase = appContainer.downloadAndInstallContentPackUseCase,
+                    contentUpdatePreferencesRepository = appContainer.contentUpdatePreferencesRepository,
+                    contentUpdateScheduler = appContainer.contentUpdateScheduler,
+                    dispatchers = appContainer.dispatchers
                 ) as T
             }
             modelClass.isAssignableFrom(com.keralapsc.prep.presentation.settings.SettingsViewModel::class.java) -> {

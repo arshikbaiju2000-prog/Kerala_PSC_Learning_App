@@ -1,0 +1,20 @@
+{
+  "catalogVersion": 1,
+  "generatedAt": 1791628327563,
+  "packs": [
+    {
+      "packId": "kpsc_ca_2024_10",
+      "packVersion": 1,
+      "formatVersion": 1,
+      "minimumAppVersionCode": 1,
+      "packName": "Current Affairs - October 2024",
+      "description": "Synthetic test fixture containing curated Kerala PSC current affairs questions for October 2024 edition.",
+      "questionCount": 10,
+      "examCount": 1,
+      "sizeBytes": 4299,
+      "sha256": "DD26618978CE5971284CFF26164D5E865B0C5BF238AF21B9581B1FCD3330CC94",
+      "downloadUrl": "https://raw.githubusercontent.com/arshikbaiju2000-prog/Kerala_PSC_Learning_App/main/content/catalog/packs/kpsc_ca_october_2024.kpsc",
+      "replacesPreviousVersion": false
+    }
+  ]
+}

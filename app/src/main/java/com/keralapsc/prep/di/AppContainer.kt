@@ -99,6 +99,12 @@ interface AppContainer {
     val installContentPackUseCase: InstallContentPackUseCase
     val getInstalledContentPacksUseCase: GetInstalledContentPacksUseCase
     val bootstrapInitialContentUseCase: BootstrapInitialContentUseCase
+    val currentAppVersionCode: Int
+    val contentDownloadService: com.keralapsc.prep.data.content.network.ContentDownloadService
+    val checkRemoteContentUpdatesUseCase: com.keralapsc.prep.domain.usecase.content.CheckRemoteContentUpdatesUseCase
+    val downloadAndInstallContentPackUseCase: com.keralapsc.prep.domain.usecase.content.DownloadAndInstallContentPackUseCase
+    val contentUpdatePreferencesRepository: com.keralapsc.prep.domain.repository.ContentUpdatePreferencesRepository
+    val contentUpdateScheduler: com.keralapsc.prep.data.work.ContentUpdateScheduler
 }
 
 class DefaultAppContainer(
@@ -315,8 +321,28 @@ class DefaultAppContainer(
 
     override val contentPackRepository: ContentPackRepository by lazy {
         ContentPackRepositoryImpl(
-            database = database
+            database = database,
+            validator = com.keralapsc.prep.data.content.ContentPackValidator(
+                currentAppVersionCode = currentAppVersionCode
+            )
         )
+    }
+
+    override val currentAppVersionCode: Int by lazy {
+        try {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                appContext.packageManager.getPackageInfo(appContext.packageName, 0).longVersionCode.toInt()
+            } else {
+                @Suppress("DEPRECATION")
+                appContext.packageManager.getPackageInfo(appContext.packageName, 0).versionCode
+            }
+        } catch (e: Exception) {
+            1
+        }
+    }
+
+    override val contentDownloadService: com.keralapsc.prep.data.content.network.ContentDownloadService by lazy {
+        com.keralapsc.prep.data.content.network.HttpContentDownloadService()
     }
 
     override val validateContentPackUseCase: ValidateContentPackUseCase by lazy {
@@ -331,6 +357,22 @@ class DefaultAppContainer(
         GetInstalledContentPacksUseCase(contentPackRepository)
     }
 
+    override val checkRemoteContentUpdatesUseCase: com.keralapsc.prep.domain.usecase.content.CheckRemoteContentUpdatesUseCase by lazy {
+        com.keralapsc.prep.domain.usecase.content.CheckRemoteContentUpdatesUseCase(
+            contentDownloadService = contentDownloadService,
+            contentPackRepository = contentPackRepository,
+            currentAppVersionCodeProvider = { currentAppVersionCode }
+        )
+    }
+
+    override val downloadAndInstallContentPackUseCase: com.keralapsc.prep.domain.usecase.content.DownloadAndInstallContentPackUseCase by lazy {
+        com.keralapsc.prep.domain.usecase.content.DownloadAndInstallContentPackUseCase(
+            contentDownloadService = contentDownloadService,
+            installContentPackUseCase = installContentPackUseCase,
+            cacheDirProvider = { appContext.cacheDir }
+        )
+    }
+
     override val bootstrapInitialContentUseCase: BootstrapInitialContentUseCase by lazy {
         BootstrapInitialContentUseCase(
             context = appContext,
@@ -339,5 +381,13 @@ class DefaultAppContainer(
             contentPackRepository = contentPackRepository,
             installContentPackUseCase = installContentPackUseCase
         )
+    }
+
+    override val contentUpdatePreferencesRepository: com.keralapsc.prep.domain.repository.ContentUpdatePreferencesRepository by lazy {
+        com.keralapsc.prep.data.repository.ContentUpdatePreferencesRepositoryImpl(appPreferencesDataStore)
+    }
+
+    override val contentUpdateScheduler: com.keralapsc.prep.data.work.ContentUpdateScheduler by lazy {
+        com.keralapsc.prep.data.work.WorkManagerContentUpdateScheduler(appContext)
     }
 }
