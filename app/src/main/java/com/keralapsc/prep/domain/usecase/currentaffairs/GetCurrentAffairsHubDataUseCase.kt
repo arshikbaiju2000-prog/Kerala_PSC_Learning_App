@@ -8,7 +8,6 @@ import com.keralapsc.prep.domain.repository.ExamRepository
 import com.keralapsc.prep.domain.repository.QuestionRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.map
 import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone
@@ -32,7 +31,6 @@ class GetCurrentAffairsHubDataUseCase(
 
             val editions = caPacks.map { pack ->
                 val editionTimestamp = extractEditionTimestamp(pack.packId, pack.packName)
-                val countInPack = allQuestions.count { it.examId?.contains(pack.packId) == true || true /* fallback or match */ }
                 CurrentAffairsEdition(
                     packId = pack.packId,
                     packName = pack.packName,
